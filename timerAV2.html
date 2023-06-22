@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Days Since June 15, 2022</title>
+  <style>
+    body {
+      font-family: 'Times New Roman', serif;
+      background-color: #F9EDEB;
+      text-align: center;
+      margin-top: 100px;
+    }
+    
+    h1 {
+      font-size: 36px;
+      color: #C71585;
+    }
+    
+    p {
+      font-size: 24px;
+      color: #8B0000;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dias desde 15 de Junho, 2022</h1>
+  <p id="timer"></p>
+  
+  <script>
+    // Function to calculate the number of days since June 15, 2022
+    function calculateDays() {
+      // Get the current date
+      var currentDate = new Date();
+      
+      // Set the reference date as June 15, 2022
+      var referenceDate = new Date('June 15, 2022');
+      
+      // Calculate the difference in milliseconds
+      var difference = currentDate - referenceDate;
+      
+      // Convert milliseconds to days
+      var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      
+      // Update the timer element with the number of days
+      document.getElementById('timer').innerHTML = days + ' dias';
+    }
+    
+    // Call the calculateDays function when the page loads
+    window.onload = calculateDays;
+  </script>
+</body>
+</html>
